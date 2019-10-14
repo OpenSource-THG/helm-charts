@@ -29,7 +29,7 @@ spec:
             - mountPath: /policy-dir
               name: policy-volume
             resources:
-              {{- toYaml .Values.resources | nindent 12 }}
+{{ toYaml .Values.resources | nindent 12 }}
             command:
             - /bin/descheduler
             - --policy-config-file=/policy-dir/deschedulerpolicy.yaml
